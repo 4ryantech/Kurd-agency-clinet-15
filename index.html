@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ku" dir="rtl">
+<html lang="ku" dir="rtl" style="background-color: #000;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,16 +15,15 @@
       ttq.page();
     }(window, document, 'ttq');
     </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style>
+        /* خێراترین شێوازی بارکردن بۆ ئەوەی ڕەشی نەمێنێت */
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         
         body { 
-            background-color: #000;
-            background-image: 
-                radial-gradient(circle at 50% -20%, #0088cc44, transparent),
-                radial-gradient(circle at 0% 100%, #0a1520, transparent);
+            background: #000 radial-gradient(circle at 50% -20%, #0088cc44, #000);
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             display: flex; justify-content: center; align-items: center; 
             height: 100vh; color: #fff; padding: 15px;
@@ -34,13 +33,13 @@
         .main-wrapper {
             width: 100%; max-width: 400px;
             height: 85vh; 
-            position: relative;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 50px;
             padding: 40px 25px;
             text-align: center;
-            backdrop-filter: blur(30px);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -48,29 +47,25 @@
         }
 
         .top-brand-small {
-            position: absolute;
-            top: 30px;
-            right: 35px;
             font-size: 0.75rem;
             font-weight: 800;
             color: #0088cc;
             letter-spacing: 1px;
             text-transform: uppercase;
+            margin-bottom: 10px;
         }
 
-        /* بەشی سەرەوە وەکو خۆی گەورەیە */
         .call-icon-main {
             font-size: 5rem;
             color: #0088cc;
             margin-top: 20px;
-            display: inline-block;
             filter: drop-shadow(0 0 25px rgba(0, 136, 204, 0.4));
             animation: pulse 2s infinite ease-in-out;
         }
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 0.8; }
         }
 
         .instruction {
@@ -89,40 +84,27 @@
 
         @keyframes moveDown {
             0%, 100% { transform: translateY(0); opacity: 0.3; }
-            50% { transform: translateY(12px); opacity: 1; }
-        }
-
-        .links-list { 
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
+            50% { transform: translateY(10px); opacity: 1; }
         }
 
         .link-item {
             display: flex; align-items: center;
             padding: 25px 30px;
-            background: rgba(0, 136, 204, 0.15);
-            border: 1px solid rgba(0, 136, 204, 0.4);
+            background: rgba(0, 136, 204, 0.2);
+            border: 1px solid rgba(0, 136, 204, 0.5);
             border-radius: 30px;
             text-decoration: none;
             color: #fff;
             font-weight: 800;
             font-size: 1.3rem;
-            width: 100%;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
-        .link-item:active { transform: scale(0.95); }
+        .link-item:active { transform: scale(0.96); background: rgba(0, 136, 204, 0.4); }
 
-        .link-item i { 
-            font-size: 2.5rem; 
-            margin-left: 20px; 
-            color: #0088cc;
-        }
-
+        .link-item i { font-size: 2.5rem; margin-left: 20px; color: #0088cc; }
         .link-item span { flex-grow: 1; text-align: right; }
 
-        /* بەشی خوارەوە - ئێستا بچووکترە */
         .footer-section {
             padding: 12px;
             background: rgba(255, 255, 255, 0.02);
@@ -130,18 +112,8 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .footer-brand { 
-            font-size: 1rem; /* بچووک کرایەوە */
-            font-weight: 800; 
-            color: #fff;
-            text-shadow: 0 0 10px rgba(0, 136, 204, 0.4);
-        }
-
-        .footer-slogan { 
-            font-size: 0.7rem; /* بچووک کرایەوە */
-            color: #aaa; 
-            margin-top: 3px; 
-        }
+        .footer-brand { font-size: 1rem; font-weight: 800; color: #fff; }
+        .footer-slogan { font-size: 0.7rem; color: #aaa; margin-top: 3px; }
     </style>
 </head>
 <body>
